@@ -1,23 +1,45 @@
-<form id="sollicitatieForm">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sollicitaties - Aqua Roleplay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<input type="text" id="naam" placeholder="Discord Naam" required>
+    <h1>Solliciteren bij Aqua Roleplay</h1>
 
-<select id="functie">
-<option>Politie</option>
-<option>Ambulance</option>
-<option>Brandweer</option>
-<option>Staff</option>
-<option>Developer</option>
-</select>
+    <form id="sollicitatieForm">
 
-<textarea id="motivatie"
-placeholder="Waarom moeten wij jou aannemen?"
-required></textarea>
+        <input
+            type="text"
+            id="naam"
+            placeholder="Discord Naam"
+            required
+        >
 
-<button type="submit">
-Versturen
-</button>
+        <select id="functie">
+            <option>Politie</option>
+            <option>Ambulance</option>
+            <option>Brandweer</option>
+            <option>Staff</option>
+            <option>Developer</option>
+        </select>
 
-</form>
+        <textarea
+            id="motivatie"
+            placeholder="Waarom moeten wij jou aannemen?"
+            required
+        ></textarea>
 
-<script src="js/sollicitatie.js"></script>
+        <button type="submit">
+            Versturen
+        </button>
+
+    </form>
+
+    <script src="sollicitatie.js"></script>
+
+</body>
+</html>

@@ -1,45 +1,111 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sollicitaties - Aqua Roleplay</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sollicitatie - Aqua Roleplay</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Poppins, sans-serif;
+}
+
+.container{
+    max-width:700px;
+    margin:120px auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+h1{
+    text-align:center;
+    color:#00d4ff;
+    margin-bottom:20px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#0f172a;
+    color:white;
+    outline:none;
+}
+
+textarea{
+    min-height:100px;
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00d4ff;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+}
+</style>
+
 </head>
 <body>
 
-    <h1>Solliciteren bij Aqua Roleplay</h1>
+<div class="container">
 
-    <form id="sollicitatieForm">
+<h1>🌊 Solliciteren bij Aqua RP</h1>
 
-        <input
-            type="text"
-            id="naam"
-            placeholder="Discord Naam"
-            required
-        >
+<form id="sollicitatieForm">
 
-        <select id="functie">
-            <option>Politie</option>
-            <option>Ambulance</option>
-            <option>Brandweer</option>
-            <option>Staff</option>
-            <option>Developer</option>
-        </select>
+    <label>Discord Naam</label>
+    <input type="text" id="naam" required placeholder="Bijv. Thijs#1234">
 
-        <textarea
-            id="motivatie"
-            placeholder="Waarom moeten wij jou aannemen?"
-            required
-        ></textarea>
+    <label>Leeftijd</label>
+    <input type="number" id="leeftijd" required placeholder="Bijv. 15">
 
-        <button type="submit">
-            Versturen
-        </button>
+    <label>Welke functie wil je?</label>
+    <select id="functie">
+        <option>Politie</option>
+        <option>Ambulance</option>
+        <option>Brandweer</option>
+        <option>Staff</option>
+        <option>Developer</option>
+    </select>
 
-    </form>
+    <label>Ervaring in roleplay</label>
+    <textarea id="ervaring" placeholder="Vertel je ervaring..." required></textarea>
 
-    <script src="sollicitatie.js"></script>
+    <label>Noem 3 pluspunten van jezelf</label>
+    <textarea id="pluspunten" placeholder="Bijv. actief, rustig, behulpzaam" required></textarea>
+
+    <label>Noem 3 minpunten van jezelf</label>
+    <textarea id="minpunten" placeholder="Bijv. soms ongeduldig" required></textarea>
+
+    <label>Waarom wil je bij Aqua RP?</label>
+    <textarea id="motivatie" required></textarea>
+
+    <button type="submit">Versturen 🚀</button>
+
+</form>
+
+</div>
+
+<script src="sollicitatie.js"></script>
 
 </body>
 </html>

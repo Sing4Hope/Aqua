@@ -1,60 +1,39 @@
-export default {
-  async fetch(request) {
+const form = document.getElementById("sollicitatieForm");
 
-    if (request.method === "OPTIONS") {
-      return new Response(null, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Methods": "POST"
-        }
-      });
-    }
+if (form) {
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-    if (request.method !== "POST") {
-      return new Response("Only POST allowed", { status: 405 });
-    }
+        const naam = document.getElementById("naam").value;
+        const functie = document.getElementById("functie").value;
+        const motivatie = document.getElementById("motivatie").value;
 
-    const data = await request.json();
+        try {
+            const response = await fetch(
+                "https://orange-rain-97cf.sing4hope.workers.dev/",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        naam,
+                        functie,
+                        motivatie
+                    })
+                }
+            );
 
-    const webhookUrl = "https://discordapp.com/api/webhooks/1513144223468097637/nlst_hjF2DK9ug76mKsyFU1HP6CTnYD5I-ICQnZf46tzdpExeKKLS5hL-DBdHupxRABf";
-
-    await fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        embeds: [{
-          title: "Nieuwe Sollicitatie",
-          color: 3447003,
-          fields: [
-            {
-              name: "Discord Naam",
-              value: data.naam
-            },
-            {
-              name: "Functie",
-              value: data.functie
-            },
-            {
-              name: "Motivatie",
-              value: data.motivatie
+            if (response.ok) {
+                alert("✅ Sollicitatie succesvol verzonden!");
+                form.reset();
+            } else {
+                alert("❌ Er ging iets mis bij het verzenden.");
+                console.error(await response.text());
             }
-          ],
-          timestamp: new Date().toISOString()
-        }]
-      })
-    });
-
-    return new Response(
-      JSON.stringify({ success: true }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
+        } catch (error) {
+            alert("❌ Kan geen verbinding maken met de server.");
+            console.error(error);
         }
-      }
-    );
-  }
+    });
 }

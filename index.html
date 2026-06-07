@@ -1,207 +1,94 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua Roleplay</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aqua Roleplay</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, sans-serif;
-        }
+<link rel="stylesheet" href="css/style.css">
 
-        body{
-            background:#0a192f;
-            color:white;
-        }
-
-        nav{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 50px;
-            background:#112240;
-            position:sticky;
-            top:0;
-        }
-
-        .logo{
-            font-size:28px;
-            font-weight:bold;
-            color:#00d4ff;
-        }
-
-        nav ul{
-            list-style:none;
-            display:flex;
-            gap:20px;
-        }
-
-        nav a{
-            color:white;
-            text-decoration:none;
-            transition:0.3s;
-        }
-
-        nav a:hover{
-            color:#00d4ff;
-        }
-
-        .hero{
-            height:90vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            background:linear-gradient(rgba(10,25,47,0.8),rgba(10,25,47,0.8)),
-            url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-            background-size:cover;
-            background-position:center;
-        }
-
-        .hero h1{
-            font-size:4rem;
-            margin-bottom:15px;
-        }
-
-        .hero p{
-            font-size:1.2rem;
-            max-width:700px;
-            margin-bottom:25px;
-        }
-
-        .btn{
-            background:#00d4ff;
-            color:#0a192f;
-            padding:15px 30px;
-            border:none;
-            border-radius:8px;
-            text-decoration:none;
-            font-weight:bold;
-            transition:0.3s;
-        }
-
-        .btn:hover{
-            background:white;
-        }
-
-        section{
-            padding:80px 10%;
-        }
-
-        h2{
-            text-align:center;
-            margin-bottom:40px;
-            color:#00d4ff;
-        }
-
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-        }
-
-        .card{
-            background:#112240;
-            padding:25px;
-            border-radius:10px;
-            transition:0.3s;
-        }
-
-        .card:hover{
-            transform:translateY(-5px);
-        }
-
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#112240;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">🌊 Aqua RP</div>
+<nav>
+    <div class="logo">
+        🌊 Aqua RP
+    </div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#over">Over Ons</a></li>
-            <li><a href="#diensten">Diensten</a></li>
-            <li><a href="#discord">Discord</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sollicitatie.html">Sollicitaties</a></li>
+        <li><a href="nieuws.html">Nieuws</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="regels.html">Regels</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-    <section class="hero" id="home">
+<header class="hero">
+    <div class="hero-content">
         <h1>Aqua Roleplay</h1>
-        <p>
-            Welkom bij Aqua Roleplay! Beleef realistische roleplay,
-            werk samen met hulpdiensten en bouw jouw verhaal op
-            binnen onze unieke community.
-        </p>
+        <p>De meest professionele Nederlandse roleplay ervaring.</p>
 
-        <a href="#" class="btn">Join Discord</a>
-    </section>
-
-    <section id="over">
-        <h2>Over Aqua Roleplay</h2>
-
-        <p style="text-align:center;max-width:900px;margin:auto;">
-            Aqua Roleplay is een professionele roleplay-community waar spelers
-            kunnen kiezen uit verschillende carrières zoals Politie,
-            Ambulance, Brandweer en Burger. Ons doel is een leuke,
-            realistische en veilige speelomgeving te bieden.
-        </p>
-    </section>
-
-    <section id="diensten">
-        <h2>Onze Diensten</h2>
-
-        <div class="cards">
-            <div class="card">
-                <h3>👮 Politie</h3>
-                <p>Handhaaf de wet en zorg voor veiligheid in de stad.</p>
-            </div>
-
-            <div class="card">
-                <h3>🚑 Ambulance</h3>
-                <p>Help gewonde burgers en red levens.</p>
-            </div>
-
-            <div class="card">
-                <h3>🚒 Brandweer</h3>
-                <p>Bestrijd branden en voer reddingsacties uit.</p>
-            </div>
-
-            <div class="card">
-                <h3>🧑 Burger</h3>
-                <p>Start een bedrijf, werk of beleef jouw eigen verhaal.</p>
-            </div>
+        <div class="buttons">
+            <a href="#" class="btn primary">Discord Joinen</a>
+            <a href="sollicitatie.html" class="btn secondary">Solliciteren</a>
         </div>
-    </section>
+    </div>
+</header>
 
-    <section id="discord">
-        <h2>Word Lid van Onze Community</h2>
+<section class="stats">
 
-        <div style="text-align:center;">
-            <p style="margin-bottom:20px;">
-                Sluit je aan bij onze Discord-server voor updates,
-                evenementen en support.
-            </p>
+    <div class="card">
+        <h2>500+</h2>
+        <p>Leden</p>
+    </div>
 
-            <a href="https://discord.gg/jouwserver" class="btn">
-                Discord Joinen
-            </a>
+    <div class="card">
+        <h2>24/7</h2>
+        <p>Support</p>
+    </div>
+
+    <div class="card">
+        <h2>100%</h2>
+        <p>Roleplay</p>
+    </div>
+
+</section>
+
+<section class="features">
+
+    <h1>Waarom Aqua RP?</h1>
+
+    <div class="feature-grid">
+
+        <div class="feature">
+            <h3>👮 Hulpdiensten</h3>
+            <p>Professionele politie, ambulance en brandweer.</p>
         </div>
-    </section>
 
-    <footer>
-        © 2026 Aqua Roleplay - Alle rechten voorbehouden.
-    </footer>
+        <div class="feature">
+            <h3>🏢 Eigen Bedrijven</h3>
+            <p>Start jouw eigen onderneming.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🎉 Events</h3>
+            <p>Wekelijkse evenementen.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🛠 Actief Team</h3>
+            <p>Dagelijks actieve staffleden.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Aqua Roleplay
+</footer>
 
 </body>
 </html>
